@@ -40,14 +40,14 @@ function App() {
     <div className="bg-slate-500/30 *:text-black min-h-screen p-8">
       <div className="grid justify-center *:text-center">
         <h1 className="font-bold text-2xl pb-10">Speech Detector</h1>
-        <span> Currently its {listening? "on" : "off"}</span>
+        <span> Currently its <strong className={classNames(listening ? "text-green-800":"text-red-700", "text-lg")}>{listening? "on" : "off"}</strong></span>
         <div className="flex items-center gap-4 text-3xl my-10">
           <button
             onClick={handleMicrophoneClick}
             className={classNames(
               listening
-                ? "p-3 shadow-md bg-red-400/20 rounded-full text-red-600 animate-pulse"
-                : "hover:cursor-pointer bg-gray-700/20 p-2 rounded-full"
+                ? "bg-red-400/20 text-red-600 animate-pulse"
+                : "bg-gray-700/20", "p-3 shadow-md rounded-full hover:cursor-pointer"
             )}
           >
             <HiMicrophone />
@@ -68,7 +68,7 @@ function App() {
       </div>
       <div className="bg-gray-500/20 p-5 rounded-md">
           <em>
-            {transcript || "...diagnostic messages"}
+            {transcript || "Waiting for you to start speaking..."}
           </em>
         </div>
     </div>
