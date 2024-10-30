@@ -68,7 +68,7 @@ function App() {
       </div>
       <div className="bg-gray-500/20 p-5 rounded-md">
           <em>
-            {transcript || "Waiting for you to start speaking..."}
+            {transcript || "Click on the first Microphone and start speaking..."}
           </em>
         </div>
     </div>
